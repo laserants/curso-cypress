@@ -1,0 +1,17 @@
+{
+  "name": "curso-cypress",
+  "version": "1.0.0",
+  "description": "Curso de Cypress impartido por el equipo de LaserAnts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server pages",
+    "open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.3.0",
+    "http-server": "^0.12.3"
+  }
+}

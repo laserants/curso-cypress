@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+<body>
+    <p>Esto es un párrafo</p>
+    <p>Esto es un párrafo</p>
+    <p>Esto es un párrafo</p>
+    <p>Esto es un párrafo</p>
+    <p>Esto es un párrafo</p>
+    <p>Esto es un párrafo</p>
+    <h1 id="titulo1">Esto es un titulo 1</h1>
+    <h2>Esto es un titulo 2</h2>
+    <h3>Esto es un titulo 3</h3>
+    <h4>Esto es un titulo 4</h4>
+    <div class="padre madre">
+        hola soy un padre/madre
+        <div class="hijo">
+            Hola soy un hijo
+            <div class="nieto">
+                Hola soy un nieto
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <button onclick="cambiarParrafo()">Click me!</button>
+    <a href="https://laserants.com">Go to Laserants</a>
+    <a href="https://telus.com">Go to Telus</a>
+
+    <style>
+        a[href="https://telus.com"] {
+            color: red;
+            font-size: 30px;
+        }
+        
+        a[href="https://telus.com"] {
+            color: green;
+        }
+    </style>
+    <script>
+        function cambiarParrafo(e) {
+            document.querySelectorAll("body *").forEach(function(p){
+                p.innerHTML = "Esto es un párrafo cambiado por JS";
+            })
+        }
+    </script>
+</body>
+</html>
