@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Comandos padres
+Cypress.Commands.add("completarNombre", (nombre) => {
+  cy.get("#firstName").type(nombre).should("have.value", nombre);
+});
+
+// Ejemplos de comandos que podría hacer
+// cy.login('admin')
+// cy.logout()
+
+// Comandos hijos
+Cypress.Commands.add(
+  "completarCampo",
+  { prevSubject: true },
+  (subject, value) => {
+    cy.get(subject.selector).clear().type(value).should("have.value", value);
+  }
+);

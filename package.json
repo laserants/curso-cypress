@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "http-server pages",
-    "cypress:open": "cypress open"
+    "cypress": "npm run cypress:dev",
+    "cypress:dev": "cypress open --config-file cypress.dev.json",
+    "cypress:prod": "cypress open --config-file cypress.prod.json"
   },
   "author": "",
   "license": "ISC",

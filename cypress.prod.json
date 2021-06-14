@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://todomvc.com/",
+  "defaultCommandTimeout": 2500,
+  "integrationFolder": "cypress/e2e-prod",
+  "fixturesFolder": "cypress/fixtures",
+  "viewportHeight": 1024,
+  "viewportWidth": 375,
+  "chromeWebSecurity": false
+}

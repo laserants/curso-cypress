@@ -11,23 +11,21 @@ context("DemoQA.com", () => {
       const userBuilder = build("User", {
         fields: {
           nombre: fake((f) => {
-            const caracter = caracteresInvalidos[f.random.number(5)] 
-            return "%"+f.name.firstName()+caracter
+            const caracter = caracteresInvalidos[f.random.number(5)];
+            return "%" + f.name.firstName() + caracter;
           }),
           apellido: fake((f) => f.name.lastName()),
         },
       });
-  
+
       const usuario1 = userBuilder();
       cy.log(usuario1);
-      cy.get("#firstName")
-        .type(usuario1.nombre)
-        .should("have.value", usuario1.nombre);
-      cy.get("#lastName")
-        .type(usuario1.apellido)
-        .should("have.value", usuario1.apellido);
-    })
-
-    
+      cy.completarNombre(usuario1.nombre);
+      cy.get("#lastName").type("prev-");
+      cy.get("#lastName").completarCampo(usuario1.apellido);
+      // cy.get("#lastName")
+      //   .type(usuario1.apellido)
+      //   .should("have.value", usuario1.apellido);
+    });
   });
 });

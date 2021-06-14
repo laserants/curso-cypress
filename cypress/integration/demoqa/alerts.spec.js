@@ -51,3 +51,5 @@ context("Alertas DEMOQA", () => {
     cy.get("#promptResult").should("have.text", "You entered Fernando Barrios");
   });
 });
+
+//TODO: como validar si es una alerta de confirm, prompt
