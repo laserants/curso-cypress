@@ -24,7 +24,8 @@ context("Todas las pruebas relacionadas con completar el formulario", () => {
     // Cuerpo de la prueba
     const estudiante = estudianteConstructor();
     const dia = estudiante.fechaNac.getDate().toString();
-    const diaFormateado = `000${dia}`.slice(-3); // 001, 030, 010, 005
+    const diaFormateado = `000${dia}`.slice(-3);
+    const diaFormateadoTabla = `00${dia}`.slice(-2);
     const anio = estudiante.fechaNac.getFullYear();
     const mes = estudiante.fechaNac.getMonth();
     const meses = [
@@ -128,7 +129,7 @@ context("Todas las pruebas relacionadas con completar el formulario", () => {
 
     cy.get(".table tbody tr:nth-child(5) td:nth-child(2)").should(
       "have.text",
-      `${dia} ${meses[mes]},${anio}`
+      `${diaFormateadoTabla} ${meses[mes]},${anio}`
     );
 
     cy.get(".table tbody tr:nth-child(6) td:nth-child(2)").should(
