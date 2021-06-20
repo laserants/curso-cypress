@@ -5,7 +5,7 @@ export default class ProductListPage {
   }
 
   irHaciaAniadirProducto() {
-    cy.get("a[href=''/Admin/Product/Create]").click();
+    cy.get("a[href='/Admin/Product/Create']").click();
   }
 
   completarNombreProducto(producto) {

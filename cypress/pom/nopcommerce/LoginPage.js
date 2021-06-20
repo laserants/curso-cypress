@@ -24,4 +24,8 @@ export default class LoginPage {
     this.completarContrasenia();
     this.submit();
   }
+
+  cerrarSesion() {
+    cy.get("a[href='/logout']").click();
+  }
 }

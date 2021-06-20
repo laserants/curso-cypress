@@ -38,6 +38,9 @@ Cypress.Commands.add(
   "completarCampo",
   { prevSubject: true },
   (subject, value) => {
-    cy.get(subject.selector).clear().type(value).should("have.value", value);
+    cy.get(subject.selector)
+      .clear({ force: true })
+      .type(value, { force: true })
+      .should("have.value", value);
   }
 );
